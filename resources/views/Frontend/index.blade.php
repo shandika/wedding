@@ -19,7 +19,6 @@
     <link href="{{ asset('Frontend/css/colorbox.css') }}" rel="stylesheet">
     <!-- Theme CSS -->
     <link href="{{ asset('Frontend/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('Frontend/css/pesan.css') }}" rel="stylesheet">
     <!-- Color CSS -->
     <link href="{{ asset('Frontend/css/red.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('Frontend/css/testStyle.css') }}" rel="stylesheet">
