@@ -19,6 +19,7 @@
     <link href="{{ asset('Frontend/css/colorbox.css') }}" rel="stylesheet">
     <!-- Theme CSS -->
     <link href="{{ asset('Frontend/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('Frontend/css/pesan.css') }}" rel="stylesheet">
     <!-- Color CSS -->
     <link href="{{ asset('Frontend/css/red.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('Frontend/css/testStyle.css') }}" rel="stylesheet">
@@ -254,6 +255,58 @@
     </section>
     <!-- Events End -->
 
+    <!-- Pesan -->
+    <section id="pesan">
+        <div class="customer-feedback">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-8">
+                        <div>
+                            <h2>What Clients Say</h2>
+                        </div>
+                    </div><!-- /End col -->
+                </div><!-- /End row -->
+
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                        <div class="owl-carousel feedback-slider">
+
+                            <!-- slider item -->
+                            <div class="feedback-slider-item">
+                                <h3 class="customer-name">Lisa Redfern</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
+                                    long established fact that a reader will be distracted by the readable its layout.
+                                </p>
+                            </div>
+                            <!-- /slider item -->
+
+                            <!-- slider item -->
+                            <div class="feedback-slider-item">
+                                <h3 class="customer-name">Cassi</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
+                                    long established fact that a reader will be distracted by the readable its layout.
+                                </p>
+                            </div>
+                            <!-- /slider item -->
+
+                            <!-- slider item -->
+                            <div class="feedback-slider-item">
+                                <h3 class="customer-name">Md Nahidul</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
+                                    long established fact that a reader will be distracted by the readable its layout.
+                                </p>
+                            </div>
+                            <!-- /slider item -->
+
+                        </div><!-- /End feedback-slider -->
+
+                    </div><!-- /End col -->
+                </div><!-- /End row -->
+            </div><!-- /End container -->
+        </div><!-- /End customer-feedback -->
+    </section>
+    <!-- Pesan End -->
+
     <!-- RSVP -->
     <section class="rsvp" id="rsvp">
         <div class="container">
@@ -402,6 +455,92 @@
     <!-- Theme JS -->
     <script src="{{ asset('Frontend/js/script.js') }}"></script>
 
+    <script>
+        jQuery(document).ready(function ($) {
+            var feedbackSlider = $(".feedback-slider");
+            feedbackSlider.owlCarousel({
+                items: 1,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                loop: true,
+                mouseDrag: true,
+                touchDrag: true,
+                navText: [
+                    "<i class='fa fa-long-arrow-left'></i>",
+                    "<i class='fa fa-long-arrow-right'></i>"
+                ],
+                responsive: {
+                    // breakpoint from 767 up
+                    767: {
+                        nav: true,
+                        dots: false
+                    }
+                }
+            });
+
+            feedbackSlider.on("translate.owl.carousel", function () {
+                $(".feedback-slider-item h3")
+                    .removeClass("animated fadeIn")
+                    .css("opacity", "0");
+                $(".feedback-slider-item img, .feedback-slider-thumb img, .customer-rating")
+                    .removeClass("animated zoomIn")
+                    .css("opacity", "0");
+            });
+
+            feedbackSlider.on("translated.owl.carousel", function () {
+                $(".feedback-slider-item h3").addClass("animated fadeIn").css("opacity", "1");
+                $(".feedback-slider-item img, .feedback-slider-thumb img, .customer-rating")
+                    .addClass("animated zoomIn")
+                    .css("opacity", "1");
+            });
+            feedbackSlider.on("changed.owl.carousel", function (property) {
+                var current = property.item.index;
+                var prevThumb = $(property.target)
+                    .find(".owl-item")
+                    .eq(current)
+                    .prev()
+                    .find("img")
+                    .attr("src");
+                var nextThumb = $(property.target)
+                    .find(".owl-item")
+                    .eq(current)
+                    .next()
+                    .find("img")
+                    .attr("src");
+                var prevRating = $(property.target)
+                    .find(".owl-item")
+                    .eq(current)
+                    .prev()
+                    .find("span")
+                    .attr("data-rating");
+                var nextRating = $(property.target)
+                    .find(".owl-item")
+                    .eq(current)
+                    .next()
+                    .find("span")
+                    .attr("data-rating");
+                $(".thumb-prev").find("img").attr("src", prevThumb);
+                $(".thumb-next").find("img").attr("src", nextThumb);
+                $(".thumb-prev")
+                    .find("span")
+                    .next()
+                    .html(prevRating + '<i class="fa fa-star"></i>');
+                $(".thumb-next")
+                    .find("span")
+                    .next()
+                    .html(nextRating + '<i class="fa fa-star"></i>');
+            });
+            $(".thumb-next").on("click", function () {
+                feedbackSlider.trigger("next.owl.carousel", [300]);
+                return false;
+            });
+            $(".thumb-prev").on("click", function () {
+                feedbackSlider.trigger("prev.owl.carousel", [300]);
+                return false;
+            });
+        }); //end ready
+    </script>
 
 </div>
 
