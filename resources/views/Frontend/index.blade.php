@@ -1,547 +1,664 @@
 <!DOCTYPE html>
-<html lang="ru">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alankar &amp; Nancy</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Wedding &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
 
-    <!-- Bootstrap CSS -->
-    <link href="{{ asset('Frontend/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('Frontend/css/bootstrap-theme.min.css') }}" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="{{ asset('Frontend/css/font-awesome.min.css') }}" rel="stylesheet">
-    <!-- Flaticon CSS -->
-    <link href="{{ asset('Frontend/css/flaticon/flaticon.css') }}" rel="stylesheet">
-    <!-- Owl Carousel CSS -->
-    <link href="{{ asset('Frontend/css/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('Frontend/css/owl.transitions.min.css') }}" rel="stylesheet">
-    <!-- ColorBox CSS -->
-    <link href="{{ asset('Frontend/css/colorbox.css') }}" rel="stylesheet">
-    <!-- Theme CSS -->
-    <link href="{{ asset('Frontend/css/style.css') }}" rel="stylesheet">
-    <!-- Color CSS -->
-    <link href="{{ asset('Frontend/css/red.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('Frontend/css/testStyle.css') }}" rel="stylesheet">
+	<!-- 
+	//////////////////////////////////////////////////////
 
-    <!-- Google Fonts -->
-    <link href='//fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
 
+	//////////////////////////////////////////////////////
+	 -->
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ asset('Frontend/css/animate.css') }}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{{ asset('Frontend/css/icomoon.css') }}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{ asset('Frontend/css/bootstrap.css') }}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{ asset('Frontend/css/magnific-popup.css') }}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{ asset('Frontend/css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('Frontend/css/owl.theme.default.min.css') }}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{ asset('Frontend/css/style.css') }}">
+	<style>
+		#scroll {
+			height: 700px;
+			overflow-y:scroll;
+			overflow-x: hidden;
+			padding: 10px;
+		}
+	</style>
+
+	<!-- Modernizr JS -->
+	<script src="{{ asset('Frontend/js/modernizr-2.6.2.min.js') }}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 
 <body>
 
-
-<!-- Header -->
-<header>
-    <div class="header_plane anim"></div>
-
-    <!-- Menu Button -->
-    <a class="main_menu_btn">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-    </a>
-
-
-    <!-- Submenu -->
-    <div class="main_menu_block">
-        <div class="menu_wrapper">
-            <div class="sub_menu anim">
-                <ul>
-                    <li><a href="#married">Invitation</a></li>
-                    <li><a href="#when_where">When &amp; Where</a></li>
-                    <li><a href="#events">Our Events</a></li>
-                    <li><a href="#rsvp">RSVP</a></li>
-                    <li><a href="#gallery">Our Gallery</a></li>
-                </ul>
-            </div>
-            <div class="sub_img anim"></div>
-        </div>
-    </div>
-    <!-- Submenu End -->
-
-    <!-- Social Buttons -->
-    <div class="header_social">
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-pinterest"></i></a>
-    </div>
-
-</header>
-<!-- Header End -->
-
-<div class="page">
-
-    <!-- Intro -->
-    <section class="home_intro  parallax2" data-image="{{ asset('Frontend/img/wine.png') }}">
-
-        <div class="home_txt" data-0="opacity:1" data-top-bottom="opacity:0">
-
-            <!-- Intro Text -->
-            <div class="box">
-                <div class="title1 title1_2">Save the Date!</div>
-                <!-- <div class="title1"><span>18 <b>02</b></span></div> -->
-                <div class="title1"><span>18  -  02</span></div>
-                <div class="title0">2017</div>
-            </div>
-            <a href="#married" class="intro_down"><span><i class="fa fa-angle-down"></i></span></a>
-        </div>
-        <div class="into_firefly"></div>
-    </section>
-    <!-- Intro End -->
-
-    <!-- Married -->
-    <section class="married clearfix" id="married">
-        <div class="container">
-            <div class="im1 parallax" data-bottom="left:30%" data-center="left:0" data-image="{{ asset('Frontend/img/alankar2.jpg') }}">
-                <div class="im_arrows"></div>
-            </div>
-            <div class="im2 parallax" data-bottom="right:20%" data-center="right:0" data-image="{{ asset('Frontend/img/nancy6.jpg') }}"
-                 data-original-title="Vidhya Shivalingam">
-                <div class="im_arrows"></div>
-            </div>
-
-            <div class="married_txt" data-bottom="opacity:0" data-center="opacity:1">
-                <h2>You're Invited</h2>
-                On the 18th of Feb, 2017<br>
-                <b> Alankar Gupta &amp; Nancy Yadav</b><br>
-                are getting married in Agra, UP.<br>
-                <a href="#rsvp" class="btn go">RSVP NOW</a>
-
-                <div class="married_coundown"></div>
-                <div class="double_arrow"></div>
-            </div>
-        </div>
-    </section>
-    <!-- Married End -->
-    <!-- When & Where -->
-    <section class="when_where white_txt parallax" id="when_where" data-image="{{ asset('Frontend/img/manpho.jpg') }}"
-             data-bottom-top="opacity:0;" data-bottom="opacity:1;">
-        <div class="over"></div>
-        <div class="container">
-
-            <!-- Photocamera Icon -->
-            <div class="photocamera"><span class="flaticon-slr2"></span></div>
-
-            <div class="when_where_container opacity">
-                <h2>Where &amp; When</h2>
-
-                <!-- Texts -->
-                <div class="pattern1"></div>
-                <div class="title1">Anand Bhavan</div>
-                <div class="title2">Banquet Hall</div>
-                <div class="title3"><a class="maplink" href="https://goo.gl/maps/aShLGX7YFkS2" target="_blank">
-                    Mall Road, <br/> Opposite Post Office, <br/>Sadar Bazar, <br/>
-                    Rakabganj, Agra<br/><i class="flaticon-map35"></i></a></div>
-
-                <div class="pattern2"></div>
-                <div class="title1">7 o'clock</div>
-                <div class="title5">IN THE EVENING</div>
-                <div class="title4">Feb Eighteen<br>Two Thousand and Seventeen</div>
-                <div class="pattern3"></div>
-                <div id="gmap_canvas"></div>
-            </div>
-        </div>
-    </section>
-    <!-- When & Where End -->
-    <!-- Events -->
-    <section class="our_story events" id="events">
-        <h2>Our Events</h2>
-
-        <!-- Wrapper -->
-        <div class="story_wrapper">
-
-            <!-- Item -->
-            <div class="story_item">
-                <div class="story_img parallax" data-image="{{ asset('Frontend/img/mehandi.jpg') }}">
-                    <div class="story_img_plane"></div>
-                </div>
-
-                <div class="story_plane">
-                    <div class="story_back"></div>
-                    <div class="story_txt">
-                        <div class="story_title">
-                            Mehandi
-                            <i>12.02.2017</i>
-                        </div>
-                        Mehandi is one of the sixteen adornments of the bride and her beauty is incomplete without it.
-                        According to popular belief, the darker the color of the Mehndi, the more her husband will love her.
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="story_item">
-                <div class="story_img parallax" data-image="{{ asset('Frontend/img/haldi.jpg') }}">
-                    <div class="story_img_plane"></div>
-                </div>
-                <div class="story_plane">
-                    <div class="story_back"></div>
-                    <div class="story_txt">
-                        <div class="story_title">
-                            Haldi
-                            <i>15.02.2017</i>
-                        </div>
-                        The haldi paste is made from turmeric, rose water (or water), and sandalwood powder. The paste serves
-                        as a cleanser for the body and soul and signifies the bride's preparation and welcoming into adult
-                        married life. The haldi in some Indian communities also signifies protection.
-                    </div>
-                </div>
-            </div>
-
-            <div class="story_item">
-                <div class="story_img parallax" data-image="{{ asset('Frontend/img/sangeet.jpg') }}">
-                    <div class="story_img_plane"></div>
-                </div>
-                <div class="story_plane">
-                    <div class="story_back"></div>
-                    <div class="story_txt">
-                        <div class="story_title">
-                            Lagan
-                            <i>18.02.2017</i>
-                        </div>
-                        The relatives and associates of bride and groom gather, pandit will convery the traditional ceremony of 'lagan' wherein 'teeka' and 'aarti' is performed for the groom. It is then followed by photographs and videos taken by the photographers.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
-        
-
-            <!-- Item -->
-        
-
-            <!-- Item -->
-            <div class="story_item">
-                <div class="story_img parallax" data-image="{{ asset('Frontend/img/reception.jpg') }}">
-                    <div class="story_img_plane"></div>
-                </div>
-                <div class="story_plane">
-                    <div class="story_back"></div>
-                    <div class="story_txt">
-                        <div class="story_title">
-                            Reception
-                            <i>18.02.2017 7PM Onwards</i>
-                        </div>
-                        This is virtually the first public appearance of the couple together, after
-                        wedding where they receive the blessing and gifts from the society and relatives. It is just an
-                        extension of the wedding day and is characterized by opulence and magnificence.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item -->
-            <div class="story_item">
-                <div class="story_img parallax" data-image="{{ asset('Frontend/img/phere.jpg') }}">
-                    <div class="story_img_plane"></div>
-                </div>
-                <div class="story_plane">
-                    <div class="story_back"></div>
-                    <div class="story_txt">
-                        <div class="story_title">
-                            Phere
-                            <i>19.02.2017 2 AM Onwards</i>
-                        </div>
-                        The seven vows or pheras can be said to contain the crux of the practice of marriage. These seven
-                        vows are the seven promises which the bride and the groom make to each other for a happy and
-                        prosperous life. They are bound together by an unseen bond protected by these promising words.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Events End -->
-
-    <!-- Pesan -->
-    <section id="pesan">
-        <div class="customer-feedback">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-sm-offset-2 col-sm-8">
-                        <div>
-                            <h2>What Clients Say</h2>
-                        </div>
-                    </div><!-- /End col -->
-                </div><!-- /End row -->
-
-                <div class="row">
-                    <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-                        <div class="owl-carousel feedback-slider">
-
-                            <!-- slider item -->
-                            <div class="feedback-slider-item">
-                                <h3 class="customer-name">Lisa Redfern</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
-                                    long established fact that a reader will be distracted by the readable its layout.
-                                </p>
-                            </div>
-                            <!-- /slider item -->
-
-                            <!-- slider item -->
-                            <div class="feedback-slider-item">
-                                <h3 class="customer-name">Cassi</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
-                                    long established fact that a reader will be distracted by the readable its layout.
-                                </p>
-                            </div>
-                            <!-- /slider item -->
-
-                            <!-- slider item -->
-                            <div class="feedback-slider-item">
-                                <h3 class="customer-name">Md Nahidul</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
-                                    long established fact that a reader will be distracted by the readable its layout.
-                                </p>
-                            </div>
-                            <!-- /slider item -->
-
-                        </div><!-- /End feedback-slider -->
-
-                    </div><!-- /End col -->
-                </div><!-- /End row -->
-            </div><!-- /End container -->
-        </div><!-- /End customer-feedback -->
-    </section>
-    <!-- Pesan End -->
-
-    <!-- RSVP -->
-    <section class="rsvp" id="rsvp">
-        <div class="container">
-            <h2>Join Our Party</h2>
-
-            <div id="envelope" data-100-top="@class:active" data-200-bottom="@class: ">
-                <div class="envelope_front">
-                    <div class="env_top_top"></div>
-                </div>
-                <div class="envelope_back">
-                    <div class="env_top"></div>
-                </div>
-
-                <div class="paper">
-
-                    <!-- End Date of Reservation -->
-                    <div class="paper_title">Please RSVP by Feb 15th</div>
-
-                    <!-- Form -->
-                    <div id="div_block_1">
-                        <div class="txt_input">
-                            <input type="text" class="form-control" id="name_block_1" placeholder="Your Name">
-                        </div>
-                        <div class="txt_input">
-                            <input type="text" class="form-control" id="guest_block_1" placeholder="Your Guest's Name">
-                        </div>
-                        <div class="txt_input">
-                            <input type="text" class="form-control" id="email_block_1" placeholder="Your E-mail">
-                        </div>
-                        <div class="txt_input">
-                            <input type="text" class="form-control" id="attending_block_1" placeholder="# Attending">
-                        </div>
-                        <input name="" type="submit" value="Send" class="btn btn-lg submit_block_1">
-
-
-                        <!-- Form Additional text -->
-                        <p>We’re excited to see you! Any questions, just email us at:
-                            <a href="mailto:alankarrocks@gmail.com">alankarrocks@gmail.com</a></p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- RSVP End -->
-
-
-    <!-- Gallery -->
-    <section class="gallery" id="gallery">
-        <h2>Our Gallery</h2>
-        <div class="gallery_wrapper">
-        <div class="gallery_item">
-                <div class="gallery_txt">
-                    <a href="{{ asset('Frontend/img/roka2.jpg') }}img/date1.jpg" title="Engagement Photos"><b>Date</b>
-                    </a>
-                </div>
-                <img src="{{ asset('Frontend/img/date1.jpg') }}" alt="Gallery 1">
-            </div>
-            <div class="gallery_item">
-                <div class="gallery_txt">
-                    <a href="{{ asset('Frontend/img/roka2.jpg') }}" title="Engagement Photos"><b>Roka</b>
-                    </a>
-                </div>
-                <img src="{{ asset('Frontend/img/roka2.jpg') }}" alt="Gallery 2">
-            </div>
-            <!-- <div class="gallery_item">
-                <div class="gallery_txt">
-                    <a href="img/gallary2.jpg" title="Engagement Photos"><b>Engagement</b>
-                    </a>
-                </div>
-                <img src="img/ring.jpg" alt="Gallery 3">
-            </div> -->
-            <div class="gallery_item">
-                <div class="gallery_txt">
-                    <a href="{{ asset('Frontend/img/ring2.jpg') }}" title="Engagement Photos"><b>Engagement</b>
-                    </a>
-                </div>
-                <img src="{{ asset('Frontend/img/ring2.jpg') }}" alt="Gallery 3">
-            </div>
-            <div class="gallery_item">
-                <div class="gallery_txt">
-                    <a href="{{ asset('Frontend/img/pre_wed.jpg') }}" title="Engagement Photos"><b>Pre Wedding</b>
-                    </a>
-                </div>
-                <img src="{{ asset('Frontend/img/pre_wed.jpg') }}" alt="Gallery 4">
-            </div>
-        </div>
-    </section>
-    <!-- Gallery End -->
-    <!-- Footer -->
-    <section class="footer white_txt parallax" id="footer" data-image="{{ asset('Frontend/img/footer3.png') }}">
-        <div class="over"></div>
-        <div class="container">
-
-            <!-- Thanks Text -->
-            <div class="thanks">&#10084;</div>
-            <div class="footer_txt">
-
-
-                <!-- Social Buttons -->
-                <div class="footer_social">
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                </div>
-
-                <div class="title1">Alankar &amp; Nancy</div>
-                <!-- Copyrights -->
-                <div class="copyrights"> © 2016 <a href="https://github.com/alankar0416">WebDesigner</a></div>
-
-            </div>
-        </div>
-
-
-    </section>
-
-
-    <!-- JQuery -->
-    <script src="{{ asset('Frontend/js/jquery.min.js') }}"></script>
-    <!-- CountDown JS -->
-    <script type="text/javascript" src="{{ asset('Frontend/js/jquery.plugin.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('Frontend/js/jquery.countdown.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('Frontend/js/jquery.onepage-scroll.min.js') }}"></script>
-
-    <!-- ColorBox JS -->
-    <script src="{{ asset('Frontend/js/jquery.colorbox-min.js') }}"></script>
-    <!-- OWL Carousel JS -->
-    <script src="{{ asset('Frontend/js/owl.carousel.min.js') }}"></script>
-    <!-- Bootstrap JS -->
-    <script src="{{ asset('Frontend/js/bootstrap.min.js') }}"></script>
-
-    <!-- ScrollR JS -->
-    <script src="{{ asset('Frontend/js/skrollr.min.js') }}"></script>
-
-
-    <!-- PrefixFree -->
-    <script src="{{ asset('Frontend/js/prefixfree.min.js') }}"></script>
-
-    <!-- FireFly JS -->
-    <script src="{{ asset('Frontend/js/jquery.firefly-0.3-min.js') }}"></script>
-
-    <!--Google Maps-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIgd3zFQvq8lEyJOHX8qw6T1ifngC8_rw"></script>
-
-    <!-- Theme JS -->
-    <script src="{{ asset('Frontend/js/script.js') }}"></script>
-
-    <script>
-        jQuery(document).ready(function ($) {
-            var feedbackSlider = $(".feedback-slider");
-            feedbackSlider.owlCarousel({
-                items: 1,
-                nav: true,
-                dots: true,
-                autoplay: true,
-                loop: true,
-                mouseDrag: true,
-                touchDrag: true,
-                navText: [
-                    "<i class='fa fa-long-arrow-left'></i>",
-                    "<i class='fa fa-long-arrow-right'></i>"
-                ],
-                responsive: {
-                    // breakpoint from 767 up
-                    767: {
-                        nav: true,
-                        dots: false
-                    }
-                }
-            });
-
-            feedbackSlider.on("translate.owl.carousel", function () {
-                $(".feedback-slider-item h3")
-                    .removeClass("animated fadeIn")
-                    .css("opacity", "0");
-                $(".feedback-slider-item img, .feedback-slider-thumb img, .customer-rating")
-                    .removeClass("animated zoomIn")
-                    .css("opacity", "0");
-            });
-
-            feedbackSlider.on("translated.owl.carousel", function () {
-                $(".feedback-slider-item h3").addClass("animated fadeIn").css("opacity", "1");
-                $(".feedback-slider-item img, .feedback-slider-thumb img, .customer-rating")
-                    .addClass("animated zoomIn")
-                    .css("opacity", "1");
-            });
-            feedbackSlider.on("changed.owl.carousel", function (property) {
-                var current = property.item.index;
-                var prevThumb = $(property.target)
-                    .find(".owl-item")
-                    .eq(current)
-                    .prev()
-                    .find("img")
-                    .attr("src");
-                var nextThumb = $(property.target)
-                    .find(".owl-item")
-                    .eq(current)
-                    .next()
-                    .find("img")
-                    .attr("src");
-                var prevRating = $(property.target)
-                    .find(".owl-item")
-                    .eq(current)
-                    .prev()
-                    .find("span")
-                    .attr("data-rating");
-                var nextRating = $(property.target)
-                    .find(".owl-item")
-                    .eq(current)
-                    .next()
-                    .find("span")
-                    .attr("data-rating");
-                $(".thumb-prev").find("img").attr("src", prevThumb);
-                $(".thumb-next").find("img").attr("src", nextThumb);
-                $(".thumb-prev")
-                    .find("span")
-                    .next()
-                    .html(prevRating + '<i class="fa fa-star"></i>');
-                $(".thumb-next")
-                    .find("span")
-                    .next()
-                    .html(nextRating + '<i class="fa fa-star"></i>');
-            });
-            $(".thumb-next").on("click", function () {
-                feedbackSlider.trigger("next.owl.carousel", [300]);
-                return false;
-            });
-            $(".thumb-prev").on("click", function () {
-                feedbackSlider.trigger("prev.owl.carousel", [300]);
-                return false;
-            });
-        }); //end ready
-    </script>
-
-</div>
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+		<!-- Header -->
+		<div id="buka">
+			<header id="fh5co-header" class="fh5co-cover" role="banner"
+				style="background-image:url({{ asset('Frontend/images/img_bg_2.jpg') }});" data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center">
+							<div class="display-t">
+								<div class="display-tc animate-box" data-animate-effect="fadeIn">
+									<h2>Undangan Pernikahan</h2>
+									<h1>Joefrey &amp; Sheila</h1>
+									<div class="simply-countdown simply-countdown-one"></div>
+									<button onclick="undangan()" class="btn btn-default btn-sm">Buka Undangan</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+        <!-- End Header -->
+
+		<div id="undangan" style="display: none;">
+        <!-- Couple -->
+			<div id="fh5co-couple">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+							<img src="{{ asset('Frontend/images/bismillah.png') }}" alt="Bismillahirrahmaanirrahiim" class="img-responsive">
+							<p>Assalamu'alaikum Warahmatullahi Wabarakatuh.</p>
+							<p>Dengan memohon rahmat dan ridha Allah swt,</p>
+							<p>Kami bermaksud mengundang Bapak/Ibu/Saudara/Saudari pada acara pernikahan kami</p>
+						</div>
+					</div>
+					<div class="couple-wrap animate-box">
+						<div class="couple-half">
+							<div class="groom">
+								<img src="{{ asset('Frontend/images/groom.jpg') }}" alt="groom" class="img-responsive">
+							</div>
+							<div class="desc-groom">
+								<h3>Joefrey Mahusay</h3>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and
+									Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+							</div>
+						</div>
+						<p class="heart text-center"><i class="icon-heart2"></i></p>
+						<div class="couple-half">
+							<div class="bride">
+								<img src="{{ asset('Frontend/images/bride.jpg') }}" alt="groom" class="img-responsive">
+							</div>
+							<div class="desc-bride">
+								<h3>Sheila Mahusay</h3>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and
+									Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- Couple End -->
+
+            <!-- Event -->
+			<div id="fh5co-event" class="fh5co-bg" style="background-image:url({{ asset('Frontend/images/img_bg_3.jpg') }});">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+							<h2>Acara</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="display-t">
+							<div class="display-tc">
+								<div class="col-md-10 col-md-offset-1">
+									<div class="col-md-6 col-sm-6 text-center">
+										<div class="event-wrap animate-box">
+											<h3>Akad Nikah</h3>
+											<div class="event-col">
+												<i class="icon-clock"></i>
+												<span>09.00 WIB</span>
+												<span>10.00 WIB</span>
+											</div>
+											<div class="event-col">
+												<i class="icon-calendar"></i>
+												<span>Minggu,</span>
+												<span>20 Juni 2022</span>
+											</div>
+											<iframe
+												src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1280267408406!2d106.9691569150978!3d-6.246854895478259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d5988a190d9%3A0x22b6a052b0a6a5f3!2sRM.%20Pondok%20Kenanga!5e0!3m2!1sen!2sid!4v1579433583123!5m2!1sen!2sid"
+												width="100%" height="250" frameborder="0" style="border:0;"
+												allowfullscreen=""></iframe>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-6 text-center">
+										<div class="event-wrap animate-box">
+											<h3>Resepsi</h3>
+											<div class="event-col">
+												<i class="icon-clock"></i>
+												<span>10.00 WIB</span>
+												<span>16.00 WIB</span>
+											</div>
+											<div class="event-col">
+												<i class="icon-calendar"></i>
+												<span>Minggu</span>
+												<span>20 Juni 2022</span>
+											</div>
+											<iframe
+												src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1280267408406!2d106.9691569150978!3d-6.246854895478259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d5988a190d9%3A0x22b6a052b0a6a5f3!2sRM.%20Pondok%20Kenanga!5e0!3m2!1sen!2sid!4v1579433583123!5m2!1sen!2sid"
+												width="100%" height="250" frameborder="0" style="border:0;"
+												allowfullscreen=""></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- Event End -->
+
+            <!-- Story -->
+			<div id="fh5co-couple-story">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+							<h2>Tentang Kedua Mempelai</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-md-offset-0">
+							<ul class="timeline animate-box">
+								<li class="animate-box">
+									<div class="timeline-badge" style="background-image:url({{ asset('Frontend/images/couple-1.jpg') }});">
+									</div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">First We Meet</h3>
+											<span class="date">December 25, 2015</span>
+										</div>
+										<div class="timeline-body">
+											<p>Far far away, behind the word mountains, far from the countries Vokalia
+												and Consonantia, there live the blind texts. Separated they live in
+												Bookmarksgrove right at the coast of the Semantics, a large language
+												ocean.</p>
+										</div>
+									</div>
+								</li>
+								<li class="timeline-inverted animate-box">
+									<div class="timeline-badge" style="background-image:url({{ asset('Frontend/images/couple-2.jpg') }});">
+									</div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">First Date</h3>
+											<span class="date">December 28, 2015</span>
+										</div>
+										<div class="timeline-body">
+											<p>Far far away, behind the word mountains, far from the countries Vokalia
+												and Consonantia, there live the blind texts. Separated they live in
+												Bookmarksgrove right at the coast of the Semantics, a large language
+												ocean.</p>
+										</div>
+									</div>
+								</li>
+								<li class="animate-box">
+									<div class="timeline-badge" style="background-image:url({{ asset('Frontend/images/couple-3.jpg') }});">
+									</div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">In A Relationship</h3>
+											<span class="date">January 1, 2016</span>
+										</div>
+										<div class="timeline-body">
+											<p>Far far away, behind the word mountains, far from the countries Vokalia
+												and Consonantia, there live the blind texts. Separated they live in
+												Bookmarksgrove right at the coast of the Semantics, a large language
+												ocean.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- Story End -->
+
+            <!-- Galerry -->
+			<div id="fh5co-gallery" class="fh5co-section-gray">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+							<h2>Galeri</h2>
+						</div>
+					</div>
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-12">
+							<ul id="fh5co-gallery-list">
+
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-1.jpg') }}); ">
+									<a href="images/gallery-1.jpg">
+										<div class="case-studies-summary">
+											<span>14 Photos</span>
+											<h2>Two Glas of Juice</h2>
+										</div>
+									</a>
+								</li>
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-2.jpg') }}); ">
+									<a href="#" class="color-2">
+										<div class="case-studies-summary">
+											<span>30 Photos</span>
+											<h2>Timer starts now!</h2>
+										</div>
+									</a>
+								</li>
+
+
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-3.jpg') }}); ">
+									<a href="#" class="color-3">
+										<div class="case-studies-summary">
+											<span>90 Photos</span>
+											<h2>Beautiful sunset</h2>
+										</div>
+									</a>
+								</li>
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-4.jpg') }}); ">
+									<a href="#" class="color-4">
+										<div class="case-studies-summary">
+											<span>12 Photos</span>
+											<h2>Company's Conference Room</h2>
+										</div>
+									</a>
+								</li>
+
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-5.jpg') }}); ">
+									<a href="#" class="color-3">
+										<div class="case-studies-summary">
+											<span>50 Photos</span>
+											<h2>Useful baskets</h2>
+										</div>
+									</a>
+								</li>
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-6.jpg') }}); ">
+									<a href="#" class="color-4">
+										<div class="case-studies-summary">
+											<span>45 Photos</span>
+											<h2>Skater man in the road</h2>
+										</div>
+									</a>
+								</li>
+
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-7.jpg') }}); ">
+									<a href="#" class="color-4">
+										<div class="case-studies-summary">
+											<span>35 Photos</span>
+											<h2>Two Glas of Juice</h2>
+										</div>
+									</a>
+								</li>
+
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-8.jpg') }}); ">
+									<a href="#" class="color-5">
+										<div class="case-studies-summary">
+											<span>90 Photos</span>
+											<h2>Timer starts now!</h2>
+										</div>
+									</a>
+								</li>
+								<li class="one-third animate-box" data-animate-effect="fadeIn"
+									style="background-image: url({{ asset('Frontend/images/gallery-9.jpg') }}); ">
+									<a href="#" class="color-6">
+										<div class="case-studies-summary">
+											<span>56 Photos</span>
+											<h2>Beautiful sunset</h2>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- Gallery End -->
+
+            <!-- Testimoni -->
+			<div id="fh5co-testimonial">
+				<div class="container">
+					<div class="row">
+						<div class="row animate-box">
+							<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+								<h2>Ucapan</h2>
+							</div>
+						</div>
+						<div id="scroll">
+							<div class="row">
+								<div class="col-md-12 animate-box">
+									<div class="card-columns">
+
+										<div class="card mb-4">
+											<div class="card-body">
+												<blockquote class=" ">
+
+													<i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3"
+														aria-hidden="true"></i>
+													<p class=" m-0 text-muted ">
+														Quisque mauris augue, molestie tincidunt condimentum vitae,
+														gravida a libero. Aenean sit amet felis dolor, in sagittis nisi.
+													</p>
+													<footer class="blockquote-footer small p-1">
+														<span class="small">John Doe
+															<cite class="font-weight-bold">COMPANY NAME</cite>
+														</span>
+													</footer>
+
+												</blockquote>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<blockquote class=" ">
+
+													<i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3"
+														aria-hidden="true"></i>
+													<p class=" m-0 text-muted ">
+														Quisque mauris augue, molestie tincidunt condimentum vitae,
+														gravida a libero. Etiam sed iaculis libero, at euismod massain
+														venenatis ligula. </p>
+													<footer class="blockquote-footer small p-1">
+														<span class="small">John Doe
+															<cite class="font-weight-bold">COMPANY NAME</cite>
+														</span>
+													</footer>
+
+												</blockquote>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<blockquote class=" ">
+
+													<i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3"
+														aria-hidden="true"></i>
+													<p class=" m-0 text-muted ">
+														Quisque mauris augue, molestie tincidunt condimentum vitae,
+														gravida a libero. Aenean sit amet felis dolor, in sagittis nisi.
+														Etiam sed iaculis libero, at euismod massain venenatis ligula.
+													</p>
+													<footer class="blockquote-footer small p-1">
+														<span class="small">John Doe
+															<cite class="font-weight-bold">COMPANY NAME</cite>
+														</span>
+													</footer>
+
+												</blockquote>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<blockquote class=" ">
+
+													<i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3"
+														aria-hidden="true"></i>
+													<p class=" m-0 text-muted ">
+														Quisque mauris augue, molestie tincidunt condimentum vitae,
+														gravida a libero. Aenean sit amet felis dolor, in sagittis nisi.
+														Etiam sed iaculis libero, at euismod massain venenatis ligula.
+													</p>
+													<footer class="blockquote-footer small p-1">
+														<span class="small">John Doe
+															<cite class="font-weight-bold">COMPANY NAME</cite>
+														</span>
+													</footer>
+
+												</blockquote>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<blockquote class=" ">
+
+													<i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3"
+														aria-hidden="true"></i>
+													<p class=" m-0 text-muted ">
+
+														Etiam sed iaculis libero, at euismod massain venenatis ligula.
+													</p>
+													<footer class="blockquote-footer small p-1">
+														<span class="small">John Doe
+															<cite class="font-weight-bold">COMPANY NAME</cite>
+														</span>
+													</footer>
+
+												</blockquote>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<blockquote class=" ">
+
+													<i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3"
+														aria-hidden="true"></i>
+													<p class=" m-0 text-muted ">
+														Quisque mauris augue, molestie tincidunt condimentum vitae,
+														gravida a libero. Aenean sit amet felis dolor, in sagittis nisi.
+														Etiam sed iaculis libero, at euismod massain venenatis ligula.
+													</p>
+													<footer class="blockquote-footer small p-1">
+														<span class="small">John Doe
+															<cite class="font-weight-bold">COMPANY NAME</cite>
+														</span>
+													</footer>
+												</blockquote>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- Testimoni End -->
+
+            <!-- RSVP -->
+			<div id="fh5co-started" class="fh5co-bg" style="background-image:url({{ asset('Frontend/images/img_bg_4.jpg') }});">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row animate-box">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+							<h2>Konfirmasi Kehadiran</h2>
+							<p>
+								Merupakan suatu kehormatan dan kebahagiaan bagi kami
+								<br>
+								apabila Bapak/Ibu/Saudara/Saudari berkenan hadir
+								memberikan doa restu.
+								<br>
+								<br>
+								Jika bisa hadir kami tunggu konfirmasinya,
+								<br>
+								Informasi: Di meja penerima tamu akan kami sediakan hand sanitizer dan pemeriksaan suhu
+								tubuh.
+								<br>
+								<br>
+								Jika tidak memungkinkan untuk hadir di pernikahan kami,tidak mengapa,
+								<br>
+								semoga bisa berjumpa di lain kesempatan
+								<br>
+								<br>
+								Stay safe & jaga kesehatan ya :)
+							</p>
+						</div>
+					</div>
+					<div class="row animate-box">
+						<div class="col-md-10 col-md-offset-1">
+							<form class="form-inline">
+								<div class="col-md-4 col-sm-4">
+									<div class="form-group">
+										<label for="name" class="sr-only">Name</label>
+										<input type="name" class="form-control" id="name" placeholder="Name">
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<div class="form-group">
+										<label for="email" class="sr-only">Email</label>
+										<input type="email" class="form-control" id="email" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<button type="submit" class="btn btn-default btn-block">Kirim</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- RSVP End -->
+
+            <!-- Footer -->
+			<footer id="fh5co-footer" role="contentinfo">
+				<div class="container">
+
+					<div class="row copyright">
+						<div class="col-md-12 text-center">
+							<p>
+								<small class="block">&copy; 2022 <a href="https://instagram.com/bumicode"
+									target="_blank">Bumi Code.</a> All Rights Reserved.</small>
+								<small class="block">Designed by <a href="http://freehtml5.co/"
+										target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/"
+										target="_blank">Unsplash</a></small>
+							</p>
+							<p>
+								<ul class="fh5co-social-icons">
+									<li><a href="#"><i class="icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon-linkedin"></i></a></li>
+									<li><a href="#"><i class="icon-dribbble"></i></a></li>
+								</ul>
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</footer>
+            <!-- Footer End -->
+		</div>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="{{ asset('Frontend/js/jquery.min.js') }}"></script>
+	<!-- jQuery Easing -->
+	<script src="{{ asset('Frontend/js/jquery.easing.1.3.js') }}"></script>
+	<!-- Bootstrap -->
+	<script src="{{ asset('Frontend/js/bootstrap.min.js') }}"></script>
+	<!-- Waypoints -->
+	<script src="{{ asset('Frontend/js/jquery.waypoints.min.js') }}"></script>
+	<!-- Carousel -->
+	<script src="{{ asset('Frontend/js/owl.carousel.min.js') }}"></script>
+	<!-- countTo -->
+	<script src="{{ asset('Frontend/js/jquery.countTo.js') }}"></script>
+
+	<!-- Stellar -->
+	<script src="{{ asset('Frontend/js/jquery.stellar.min.js') }}"></script>
+	<!-- Magnific Popup -->
+	<script src="{{ asset('Frontend/js/jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ asset('Frontend/js/magnific-popup-options.js') }}"></script>
+
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="{{ asset('Frontend/js/simplyCountdown.js') }}"></script>
+	<!-- Main -->
+	<script src="{{ asset('Frontend/js/main.js') }}"></script>
+
+	<script>
+		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+
+		// default example
+		simplyCountdown('.simply-countdown-one', {
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate()
+		});
+
+		//jQuery example
+		$('#simply-countdown-losange').simplyCountdown({
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate(),
+			enableUtc: false
+		});
+	</script>
+
+	<script>
+		function undangan() {
+			var kj = document.getElementById('undangan');
+			var b = document.getElementById('buka');
+			if (kj.style.display === 'none') {
+				kj.style.display = 'block';
+				b.style.display = 'none';
+			} else {
+				kj.style.display = 'none';
+				b.style.display = 'block';
+			}
+		}
+	</script>
 
 </body>
+
 </html>
