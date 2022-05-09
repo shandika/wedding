@@ -67,10 +67,18 @@
 			overflow-x: hidden;
 			padding: 10px;
 		}
+
+        .form-check-label {
+			color:white;
+		}
 	</style>
 
 	<!-- Modernizr JS -->
 	<script src="{{ asset('Frontend/js/modernizr-2.6.2.min.js') }}"></script>
+    <script
+      src="https://kit.fontawesome.com/2828f7885a.js"
+      integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+      crossorigin="anonymous"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -152,6 +160,14 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 							<h2>Acara</h2>
+                            <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                                <a href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NGgzdW00NG84dXFwMzcwNXYxbGliNGxzaWggZGFlbmdkb2FuZ0Bt&amp;tmsrc=daengdoang%40gmail.com"
+                                    target="_blank" class="btn has-tooltip btn-default"
+                                    data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
+                                    <i class="far fa-calendar-plus"></i>
+                                    &nbsp;&nbsp;Ingatkan Saya
+                                </a>
+                            </div>
 						</div>
 					</div>
 					<div class="row">
@@ -546,19 +562,45 @@
 					<div class="row animate-box">
 						<div class="col-md-10 col-md-offset-1">
 							<form class="form-inline">
-								<div class="col-md-4 col-sm-4">
+								<div class="col-md-6 col-sm-6">
 									<div class="form-group">
-										<label for="name" class="sr-only">Name</label>
-										<input type="name" class="form-control" id="name" placeholder="Name">
+										<label for="name" class="sr-only">Nama</label>
+										<input type="name" class="form-control" name="nama" id="nama" placeholder="Isi Nama">
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-4">
+                                <div class="col-md-6 col-sm-6">
 									<div class="form-group">
-										<label for="email" class="sr-only">Email</label>
-										<input type="email" class="form-control" id="email" placeholder="Email">
+										<label for="alamat" class="sr-only">Partner</label>
+										<input type="number" class="form-control" name="partner" id="partner" placeholder="Partner">
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-4">
+								<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+										<label for="alamat" class="sr-only">Alamat</label>
+										<textarea class="form-control" name="alamat" id="alamat" placeholder="Alamat"></textarea>
+									</div>
+								</div>
+                                <div class="col-md-6 col-sm-6">
+									<div class="form-group">
+										<label for="alamat" class="sr-only">Pesan</label>
+										<textarea class="form-control" name="pesan" id="pesan" placeholder="Berikan Doa untuk Kedua Mempelai"></textarea>
+									</div>
+								</div>
+                                <div class="col-md-6 col-sm-6">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="konfirmasi" id="konfirmasi" value="Iya, Saya Akan Datang"> 
+                                        <label class="form-check-label" for="konfirmasi" style="">Iya, Saya Akan Datang</label>
+									</div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="konfirmasi" id="konfirmasi2" value="Saya Masih Ragu"> 
+                                        <label class="form-check-label" for="konfirmasi2">Saya Masih Ragu</label>
+									</div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="konfirmasi" id="konfirmasi3" value="Maaf, Saya Tidak Bisa Datang"> 
+                                        <label class="form-check-label" for="konfirmasi3">Maaf, Saya Tidak Bisa Datang</label>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6">
 									<button type="submit" class="btn btn-default btn-block">Kirim</button>
 								</div>
 							</form>
@@ -625,7 +667,7 @@
 	<script src="{{ asset('Frontend/js/simplyCountdown.js') }}"></script>
 	<!-- Main -->
 	<script src="{{ asset('Frontend/js/main.js') }}"></script>
-
+   
 	<script>
 		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
